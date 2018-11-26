@@ -2,6 +2,18 @@
     <div class="col-sm-12">
       <div class="jumbotron">
         <h5>Plan you trip</h5>
+        <!--<trips-list></trips-list>-->
+
+        <form>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Where do you want to go ?">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Start date">
+          </div>
+          <button type="submit" class="btn-primary" (click)="btnClick()">Plan your trip!</button>
+        </form>
+
       </div>
     </div>
   </div>

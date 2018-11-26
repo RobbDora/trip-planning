@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { MovieService } from '../movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,14 +12,12 @@ export class DashboardComponent implements OnInit{
   searchResults: Array<Object>;
   searchTerm: string;
 
-  constructor(private movieService: MovieService) { }
-
-  searchMovies() {
-    this.movieService.searchMovies(this.searchTerm).subscribe(res => {
-      this.searchResults = res.results;
-    })
-  }
+  constructor(private router: Router) {}
 
   ngOnInit() { }
+
+  btnClick(){
+    this.router.navigate(['/trip-planning']);
+}
 
 }
