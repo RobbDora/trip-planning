@@ -6,17 +6,21 @@
       <!--<trips-list></trips-list>-->
 
       <form>
+        <div class="row">
         <div class="form-group col-md-6">
           <div id='searchBoxContainer'>
             <input type='text' class="form-control" id='searchBox' placeholder="Where do you want to go ?" />
           </div>
-          <div id="myMap" style="position:relative;width:800px;height:400px;"></div>
         </div>
+      </div>
+      <div class="row">
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Start date">
+          <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Start date" [ngModel]="today | date:'yyyy-MM-dd'">
         </div>
-        <button type="submit" class="btn btn-primary" (click)="planTrip()">Start plan!</button>
+      </div>
+        <div id="myMap" style="position:relative;width:800px;height:400px;"></div>
       </form>
+      <button type="submit" class="btn btn-primary" (click)="planTrip()">Start plan!</button>
       <div id='output' style="margin-left:10px;float:left;"></div>
 
     </div>

@@ -10,10 +10,13 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit{
   searchResults: Array<Object>;
   searchTerm: string;
+  today: Date;
 
   constructor(private router: Router) {}
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.today = new Date();
+  }
 
   btnClick(){
     this.router.navigate(['/trip-planning']);
